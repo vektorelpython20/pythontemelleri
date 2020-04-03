@@ -49,17 +49,26 @@ class MarvelHero:
     def Savunma(self,darbe):
         self.saglik -= darbe//3
     
-    def OfansSec(self):
+    def OfansSec(self,param=0):
         liste = [self.Vurus,self.Vurus2,self.Vurus3]
         self.__gizliBirikme += 1
+        if param:
+            return self.HareketSecim(liste)()
         return ch(liste)()
 
-    def DefansSec(self,darbe):
+    def DefansSec(self,darbe,param=0):
         liste = [self.Darbe,self.Savunma]
         if self.__gizliBirikme == self.__gizli:
             self.__gizliBirikme = 0
             liste.append(self.Yetenek)
+        if param:
+            return self.HareketSecim(liste)(darbe)
         return ch(liste)(darbe)
+
+    def HareketSecim(self,liste):
+        for item in liste:
+            print(item.__name__)
+        return liste[int(input("Hareketi Seç"))-1]
 
     def Yetenek(self,darbe=0):
         pass
@@ -68,6 +77,7 @@ class MarvelHero:
 class Deadpool(MarvelHero):
     def __init__(self):
         super().__init__("Deadpool",200,1500)
+        self.__gizli = 10
     
     def Yetenek(self,darbe=0):
         self.saglik = 1500
@@ -98,20 +108,79 @@ class Hulk(MarvelHero):
     def __init__(self):
         super().__init__("Hulk",250,2000)
 
-Karlist = [Deadpool,IronMan,Thanos,Thor,SpiderMan,Hulk]
-P1 = ch(Karlist)()
-P2 = ch(Karlist)()
-print(f"P1:{P1.adi} vs P2:{P2.adi}")
-import time
-while P1.saglik > 0 and P2.saglik > 0:
-    P2.DefansSec(P1.OfansSec())
-    time.sleep(1)
-    P1.DefansSec(P2.OfansSec())
-    print(f"P1:{P1.adi} Sağlık:{P1.saglik} vs P2:{P2.adi} Sağlık:{P2.saglik}")
-else:
-    if P1.saglik > P2.saglik:
-        print(P1.adi,"kazandı")
-    elif P1.saglik < P2.saglik:
-        print(P2.adi,"kazandi")
+def PCvsPC():
+    Karlist = [Deadpool,IronMan,Thanos,Thor,SpiderMan,Hulk]
+    P1 = ch(Karlist)()
+    P2 = ch(Karlist)()
+    print(f"P1:{P1.adi} vs P2:{P2.adi}")
+    import time
+    while P1.saglik > 0 and P2.saglik > 0:
+        P2.DefansSec(P1.OfansSec())
+        time.sleep(1)
+        P1.DefansSec(P2.OfansSec())
+        print(f"P1:{P1.adi} Sağlık:{P1.saglik} vs P2:{P2.adi} Sağlık:{P2.saglik}")
     else:
-        print("Berabere")
+        if P1.saglik > P2.saglik:
+            print(P1.adi,"kazandı")
+        elif P1.saglik < P2.saglik:
+            print(P2.adi,"kazandi")
+        else:
+            print("Berabere")
+
+def USERvsPC():
+    menu = """
+    1-Deadpool
+    2-IronMan
+    3-Thanos
+    4-Thor
+    5-SpiderMan
+    6-Hulk
+    Karakteri Seçiniz :
+    """
+    secim = int(input(menu))
+    Karlist = [Deadpool,IronMan,Thanos,Thor,SpiderMan,Hulk]
+    P1 = Karlist[secim-1]()
+    P2 = ch(Karlist)()
+    print(f"P1:{P1.adi} vs P2:{P2.adi}")
+    import time
+    while P1.saglik > 0 and P2.saglik > 0:
+        P2.DefansSec(P1.OfansSec(1))
+        time.sleep(1)
+        P1.DefansSec(P2.OfansSec(),1)
+        print(f"P1:{P1.adi} Sağlık:{P1.saglik} vs P2:{P2.adi} Sağlık:{P2.saglik}")
+    else:
+        if P1.saglik > P2.saglik:
+            print(P1.adi,"kazandı")
+        elif P1.saglik < P2.saglik:
+            print(P2.adi,"kazandi")
+        else:
+            print("Berabere")    
+
+def USERvsUSER():
+    menu = """
+    1-Deadpool
+    2-IronMan
+    3-Thanos
+    4-Thor
+    5-SpiderMan
+    6-Hulk
+    Karakteri Seçiniz :
+    """
+    Karlist = [Deadpool,IronMan,Thanos,Thor,SpiderMan,Hulk]
+    P1 = Karlist[int(input(menu+"Kullanıcı 1"))-1]()
+    P2 = Karlist[int(input(menu+"Kullanıcı 2"))-1]()
+    print(f"P1:{P1.adi} vs P2:{P2.adi}")
+    import time
+    while P1.saglik > 0 and P2.saglik > 0:
+        P2.DefansSec(P1.OfansSec(1),1)
+        time.sleep(1)
+        P1.DefansSec(P2.OfansSec(1),1)
+        print(f"P1:{P1.adi} Sağlık:{P1.saglik} vs P2:{P2.adi} Sağlık:{P2.saglik}")
+    else:
+        if P1.saglik > P2.saglik:
+            print(P1.adi,"kazandı")
+        elif P1.saglik < P2.saglik:
+            print(P2.adi,"kazandi")
+        else:
+            print("Berabere")    
+
