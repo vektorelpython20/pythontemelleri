@@ -8,6 +8,7 @@ class Kedi:  # class
 
     def Miyavla(self):   # instance method - örnek metod
         print(self.adi,"Miyavladi")
+
     
     def Beslendi(self):
         print(self.adi,"Beslendi")
@@ -19,4 +20,7 @@ class Kedi:  # class
 kedi1 = Kedi("Melek",5)
 kedi1.Miyavla()
 kedi1.Beslendi()
+kedi2 = Kedi("Tekir",3)
+kedi2.Miyavla()
+print(Kedi.tur)
 del kedi1

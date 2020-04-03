@@ -12,14 +12,18 @@ class A:
     
     @c.setter  # setter
     def c(self,c):
-        if c.isnumeric():
-            self.__c = c
-            print("c yi değiştirdim")
+        if isinstance(c,str):
+            if c.isnumeric():
+                c = int(c)
+                if 10<c<20: 
+                    self.__c = c
+                    print("c yi değiştirdim")
         else:
             print("C yanlış değer")
     
     @c.deleter # deleter
     def c(self):
+        self.silinen_c = self.__c
         del self.__c
 
     
@@ -31,7 +35,7 @@ nesne1 = A("A","B")
 
 print(nesne1.c)
 nesne1.FuncA()
-nesne1.c = "A"
+nesne1.c = "5"
 
 
 
