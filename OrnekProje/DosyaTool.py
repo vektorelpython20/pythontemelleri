@@ -3,9 +3,10 @@ class DosyaTool:
     def __init__(self,adres=r"OrnekProje",dosyaadi="defter",uzanti=".csv",
     ayrac=";",alanlar=["Adı","Soyadı","Telefon"]):
         self.adres = adres
-        self.dosyaadi = "defter"
+        self.dosyaadi = dosyaadi
         self.uzanti = uzanti 
         self.dosyaAdresi = self.adres + sep + self.dosyaadi + self.uzanti
+        #OrnekProje/defter.csv
         self.ayrac = ayrac
         self.alanlar = alanlar
         self.dosya = None
@@ -15,11 +16,11 @@ class DosyaTool:
 
     def DosyaAc(self):
         if path.exists(self.dosyaAdresi):
-            self.dosya = open(self.dosyaAdresi,"r+")
+            self.dosya = open(self.dosyaAdresi,"r+",encoding="UTF-8")
         else:
-            self.dosya = open(self.dosyaAdresi,"w+")
+            self.dosya = open(self.dosyaAdresi,"w+",encoding="UTF-8")
     
-    def __del__(self):
+    def __del__(self): #destructor
         self.dosya.seek(0)
         self.dosya.truncate()
         self.dosya.writelines(self.kayitlar)
