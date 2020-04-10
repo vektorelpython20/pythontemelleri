@@ -83,8 +83,6 @@ class TelefonDefter:
                     self.Guncelleme(secid)
                 elif islem == 4:
                     self.listeleme()
-
-
             else:
                 islem = 6
         else:
@@ -94,3 +92,5 @@ class TelefonDefter:
         self.db.commit()
         self.db.close()
 
+telDefter = TelefonDefter()
+telDefter.Menu()
