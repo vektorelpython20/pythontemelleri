@@ -56,7 +56,7 @@ class TelefonDefter:
         finally:
             self.db.commit()
 
-            
+   
     def __del__(self):
         self.cur.close()
         self.db.commit()
