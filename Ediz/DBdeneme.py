@@ -38,6 +38,17 @@ class TelefonDefter:
         finally:
             self.db.commit()
 
+    def Silme(self,id):
+        try:
+            sorgu = f""" DELETE FROM telefonlar WHERE tel_id = {id} """
+            self.cur.execute(sorgu)
+            return 1
+        except Exception as hata:
+            print("Hata oluştu.",hata)
+            return hata
+        finally:
+            self.db.commit()
+
     def __del__(self):
         self.cur.close()
         self.db.commit()
