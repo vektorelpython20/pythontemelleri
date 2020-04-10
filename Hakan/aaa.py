@@ -10,9 +10,8 @@ class TelefonDefter:
             soyadi = input("Soyadınızı Giriniz: ")
             telefon = input("Telefon numaranızı giriniz: ")
             sorgu = f"""
-            INSERT INTO telefonlar (adi,soyadi,tel_no)
-            VALUES
-            ('{adi}','{soyadi}','{telefon}')
+            UPDATE telefonlar SET adi='{adi}', soyadi= '{soyadi}, tel_no= '{telefon}'
+            WHERE tel_id = {id}
             """
             self.cur.execute(sorgu)
             return 1
