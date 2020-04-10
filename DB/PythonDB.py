@@ -18,7 +18,7 @@ class personelListe:
             SELECT departman_id
               FROM DEPARTMANLAR
              WHERE departman_adi = '{param}'
-        )"""))
+        )""")) 
 
 liste = personelListe()
 liste.personelListeDep('Finans')
