@@ -44,12 +44,12 @@ class TelefonDefter:
             self.cur.execute(sorgu)
             return 1
         except Exception as hata:
-            print("Hata oluştu."hata)
+            print("Hata oluştu.",hata)
             return hata
         finally: 
             self.db.commit()
 
-            
+
 
     def __del__(self):
         self.cur.close()
