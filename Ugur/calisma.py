@@ -1,4 +1,20 @@
 import sqlite3 as sql
-db = sql.connect("DB/IK.sqlite")
-cur = db.cursor()
-cur.execute("")
+try:
+    db = sql.connect("DB/IK.sqlite")
+    cur = db.cursor()
+    adi = input("Adınızı Giriniz:")
+    soyadi = input("Soyadınızı Giriniz:")
+    telefon = input("Telefon Numaranızı Giriniz:")
+    sorgu = f"""
+    INSERT INTO telefonlar (adi,soyadi,tel_no) 
+    VALUES 
+    ('{adi}','{soyadi}','{telefon}')
+    """
+    cur.execute(sorgu)
+except Exception as hata:
+    print("Hata Oluştu:",hata)
+finally:
+    cur.close()
+    db.commit()
+    db.close
+
