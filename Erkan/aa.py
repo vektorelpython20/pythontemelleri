@@ -23,12 +23,24 @@ class TelefonDefter:
             self.db.commit()
     def güncelleme(self):
         try:
-             adi = input("Adınızı Giriniz: ")
+            adi = input("Adınızı Giriniz: ")
             soyadi = input("Soyadınızı Giriniz: ")
             telefon = input("Telefon numaranızı giriniz: ")
             sorgu = f"""
             update telefonlar set adi='{adi}',soyadi='{soyadi}',tel_no='{telefon} where tel_id={id}"""
             self.cur.execute(sorgu)
+            return 1
+        except Exception as hata: 
+            print("Hata oluştu.",hata)
+            return hata
+        finally:
+            self.db.commit()
+    
+    def silme(self):
+        try:
+            sorgu = f"""
+            delete from telefonlar where tel_id='{id}"""
+            self.cur.execute(sorgu) 
             return 1
         except Exception as hata: 
             print("Hata oluştu.",hata)
