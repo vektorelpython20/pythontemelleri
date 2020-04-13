@@ -1,5 +1,4 @@
 from tkinter import *
-from 
 
 pencere =Tk()
 pencere.geometry("600x400+200+200")
