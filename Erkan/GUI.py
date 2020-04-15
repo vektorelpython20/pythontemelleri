@@ -15,11 +15,11 @@ def tiklandi2():
     yazi=txt.get()
     etiket2.configure(text=yazi)
 txt=Entry(pencere)
-txt.grid(column=0,row=1)
+txt.grid(column=0,row=4)
 dugme2=Button(pencere,text="=>AKTAR",command=tiklandi2)
-dugme2.grid(column=1,row=1)
+dugme2.grid(column=1,row=4)
 etiket2=Label(pencere,text="--")
-etiket2.grid(column=2,row=1)
+etiket2.grid(column=2,row=4)
 #-------------------------------------------
 
 
