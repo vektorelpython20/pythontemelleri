@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>480</width>
+    <height>640</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="formLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>451</width>
+      <height>581</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetNoConstraint</enum>
+     </property>
+     <property name="fieldGrowthPolicy">
+      <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+     </property>
+     <property name="rowWrapPolicy">
+      <enum>QFormLayout::DontWrapRows</enum>
+     </property>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Kullanıcı Adı:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="txtUser">
+       <property name="inputMask">
+        <string extracomment="Rakam Girilir"/>
+       </property>
+       <property name="text">
+        <string extracomment="Rakam Girilir"/>
+       </property>
+       <property name="maxLength">
+        <number>11</number>
+       </property>
+       <property name="placeholderText">
+        <string>Sadece Rakam Giriniz</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Şifre</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="txtPass">
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Seçim Yap</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QRadioButton" name="rdb1">
+       <property name="text">
+        <string>Seçim 1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QRadioButton" name="rdb2">
+       <property name="text">
+        <string>Seçim 2</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Düğme</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QPushButton" name="btGonder">
+       <property name="text">
+        <string>Gönder</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QCheckBox" name="chkSecim">
+       <property name="text">
+        <string>Gönderilecek</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QComboBox" name="cmbSecim"/>
+     </item>
+     <item row="9" column="1">
+      <widget class="QLineEdit" name="txtGiris">
+       <property name="inputMask">
+        <string extracomment="Rakam Girilir"/>
+       </property>
+       <property name="text">
+        <string extracomment="Rakam Girilir"/>
+       </property>
+       <property name="maxLength">
+        <number>11</number>
+       </property>
+       <property name="placeholderText">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>480</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuBot">
+    <property name="title">
+     <string>Bot</string>
+    </property>
+    <addaction name="actionHesap_Bilgileri"/>
+   </widget>
+   <widget class="QMenu" name="yardim">
+    <property name="title">
+     <string>Yardım</string>
+    </property>
+    <addaction name="hakkinda"/>
+   </widget>
+   <addaction name="menuBot"/>
+   <addaction name="yardim"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionHesap_Bilgileri">
+   <property name="text">
+    <string>Hesap Bilgileri</string>
+   </property>
+  </action>
+  <action name="hakkinda">
+   <property name="text">
+    <string>Hakkında</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
