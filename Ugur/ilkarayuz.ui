@@ -33,6 +33,29 @@
      <property name="rowWrapPolicy">
       <enum>QFormLayout::DontWrapRows</enum>
      </property>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Kullanıcı Adı:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="txtUser">
+       <property name="inputMask">
+        <string extracomment="Rakam Girilir"/>
+       </property>
+       <property name="text">
+        <string extracomment="Rakam Girilir"/>
+       </property>
+       <property name="maxLength">
+        <number>11</number>
+       </property>
+       <property name="placeholderText">
+        <string>Sadece Rakam Giriniz</string>
+       </property>
+      </widget>
+     </item>
      <item row="2" column="0">
       <widget class="QLabel" name="label">
        <property name="text">
@@ -41,15 +64,9 @@
       </widget>
      </item>
      <item row="2" column="1">
-      <widget class="QLineEdit" name="txtPass"/>
-     </item>
-     <item row="1" column="1">
-      <widget class="QLineEdit" name="txtUser"/>
-     </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="label_2">
-       <property name="text">
-        <string>Kullanıcı Adı:</string>
+      <widget class="QLineEdit" name="txtPass">
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
        </property>
       </widget>
      </item>
@@ -57,34 +74,6 @@
       <widget class="QLabel" name="label_3">
        <property name="text">
         <string>Seçim Yap</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="1">
-      <widget class="QPushButton" name="btGonder">
-       <property name="text">
-        <string>Gönder</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="0">
-      <widget class="QLabel" name="label_4">
-       <property name="text">
-        <string>Düğme</string>
-       </property>
-      </widget>
-     </item>
-     <item row="6" column="0">
-      <widget class="QLabel" name="label_5">
-       <property name="text">
-        <string>TextLabel</string>
-       </property>
-      </widget>
-     </item>
-     <item row="7" column="0">
-      <widget class="QLabel" name="label_6">
-       <property name="text">
-        <string>TextLabel</string>
        </property>
       </widget>
      </item>
@@ -102,6 +91,27 @@
        </property>
       </widget>
      </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Düğme</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QPushButton" name="btGonder">
+       <property name="text">
+        <string>Gönder</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </item>
      <item row="6" column="1">
       <widget class="QCheckBox" name="chkSecim">
        <property name="text">
@@ -109,8 +119,31 @@
        </property>
       </widget>
      </item>
-     <item row="7" column="1">
+     <item row="8" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1">
       <widget class="QComboBox" name="cmbSecim"/>
+     </item>
+     <item row="9" column="1">
+      <widget class="QLineEdit" name="txtGiris">
+       <property name="inputMask">
+        <string extracomment="Rakam Girilir"/>
+       </property>
+       <property name="text">
+        <string extracomment="Rakam Girilir"/>
+       </property>
+       <property name="maxLength">
+        <number>11</number>
+       </property>
+       <property name="placeholderText">
+        <string/>
+       </property>
+      </widget>
      </item>
     </layout>
    </widget>
