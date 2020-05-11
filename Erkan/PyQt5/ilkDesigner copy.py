@@ -6,7 +6,7 @@ class Uygulama(QMainWindow):
     def __init__(self):
         super().__init__()
         #2.
-        uic.loadUi(r"Ediz\PyQt5\ilkarayuz.ui",self)
+        uic.loadUi(r"Erkan\PyQt5\ilkarayuz.ui",self)
         #3.
         # self.win = uic.loadUi(r"Ediz\PyQt5\ilkarayuz.ui")
         # self.win.btGonder
@@ -19,6 +19,8 @@ class Uygulama(QMainWindow):
         self.txtGiris.textChanged.connect(self.GirisKontrol)
         self.show()
 
+
+
     def GirisKontrol(self):
         gelen = self.sender()
         adi = gelen.objectName()
@@ -30,6 +32,7 @@ class Uygulama(QMainWindow):
                     self.statusBar().showMessage(" Sadece Harf Girilir")
                 else:
                     sonuc += item.upper()
+                
         elif adi == "txtUser":
             for item in yazi:
                 if item.isdigit():
@@ -38,6 +41,7 @@ class Uygulama(QMainWindow):
                 else:
                     self.statusBar().showMessage("Harf Girilmez")
         gelen.setText(sonuc)
+
 
     def Tiklandi(self):
         self.txtPass.setText(self.txtUser.text())

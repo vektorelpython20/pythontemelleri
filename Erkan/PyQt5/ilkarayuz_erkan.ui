@@ -36,41 +36,41 @@
      <item row="2" column="0">
       <widget class="QLabel" name="label">
        <property name="text">
-        <string>TextLabel</string>
+        <string>Şifre</string>
        </property>
       </widget>
      </item>
      <item row="2" column="1">
-      <widget class="QLineEdit" name="lineEdit"/>
+      <widget class="QLineEdit" name="txtPass"/>
      </item>
      <item row="1" column="1">
-      <widget class="QLineEdit" name="lineEdit_2"/>
+      <widget class="QLineEdit" name="txtUser"/>
      </item>
      <item row="1" column="0">
       <widget class="QLabel" name="label_2">
        <property name="text">
-        <string>TextLabel</string>
+        <string>Kullanıcı Adı:</string>
        </property>
       </widget>
      </item>
      <item row="3" column="0">
       <widget class="QLabel" name="label_3">
        <property name="text">
-        <string>TextLabel</string>
+        <string>Seçim Yap</string>
        </property>
       </widget>
      </item>
      <item row="5" column="1">
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="btGonder">
        <property name="text">
-        <string>PushButton</string>
+        <string>Gönder</string>
        </property>
       </widget>
      </item>
      <item row="5" column="0">
       <widget class="QLabel" name="label_4">
        <property name="text">
-        <string>TextLabel</string>
+        <string>Düğme</string>
        </property>
       </widget>
      </item>
@@ -89,28 +89,28 @@
       </widget>
      </item>
      <item row="3" column="1">
-      <widget class="QRadioButton" name="radioButton">
+      <widget class="QRadioButton" name="rdb1">
        <property name="text">
-        <string>RadioButton</string>
+        <string>Seçim 1</string>
        </property>
       </widget>
      </item>
      <item row="4" column="1">
-      <widget class="QRadioButton" name="radioButton_2">
+      <widget class="QRadioButton" name="rdb2">
        <property name="text">
-        <string>RadioButton</string>
+        <string>Seçim 2</string>
        </property>
       </widget>
      </item>
      <item row="6" column="1">
-      <widget class="QCheckBox" name="checkBox">
+      <widget class="QCheckBox" name="chkSecim">
        <property name="text">
-        <string>CheckBox</string>
+        <string>Gönderilecek</string>
        </property>
       </widget>
      </item>
      <item row="7" column="1">
-      <widget class="QComboBox" name="comboBox"/>
+      <widget class="QComboBox" name="cmbSecim"/>
      </item>
     </layout>
    </widget>
@@ -130,14 +130,14 @@
     </property>
     <addaction name="actionHesap_Bilgileri"/>
    </widget>
-   <widget class="QMenu" name="menuYard_m">
+   <widget class="QMenu" name="yardim">
     <property name="title">
      <string>Yardım</string>
     </property>
-    <addaction name="actionHakk_nda"/>
+    <addaction name="hakkinda"/>
    </widget>
    <addaction name="menuBot"/>
-   <addaction name="menuYard_m"/>
+   <addaction name="yardim"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionHesap_Bilgileri">
@@ -145,7 +145,7 @@
     <string>Hesap Bilgileri</string>
    </property>
   </action>
-  <action name="actionHakk_nda">
+  <action name="hakkinda">
    <property name="text">
     <string>Hakkında</string>
    </property>
