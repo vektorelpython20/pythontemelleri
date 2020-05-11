@@ -36,7 +36,6 @@
      <item row="2" column="0">
       <widget class="QLabel" name="label">
        <property name="text">
-        <string>Şifre</string>
        </property>
       </widget>
      </item>
