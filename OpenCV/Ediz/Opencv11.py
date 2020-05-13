@@ -6,7 +6,7 @@ cap = cv2.VideoCapture(1)
 yuzler_cascade = cv2.CascadeClassifier(r"OpenCV\Cascades\haarcascade_frontalface_default.xml")
 goz_cascade = cv2.CascadeClassifier(r"OpenCV\Cascades\haarcascade_eye.xml")
 gozluk = cv2.imread(r"OpenCV\Images\sunglasses.png",0)
-
+img = cv2.imread(r"OpenCV\Images\yuz2.PNG")
 
 while True:
     # cv2.imshow("1",gozluk)
