@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
-cap = cv2.VideoCapture(r"OpenCV\Images\people-walking.mp4")
+cap = cv2.VideoCapture(1)
 fgbg =  cv2.createBackgroundSubtractorMOG2()
 
 while 1:
