@@ -16,7 +16,7 @@ p{
 }
 
 form {
-    font-size: 1.3em;
+    font-size: 1.em;
     margin-bottom:10px;
 }
 
@@ -29,3 +29,4 @@ form {
     font-size: 1em;
     border-radius: 25px;
 }
+
